@@ -1,0 +1,20 @@
+# CloudPress WordPress Worker 배포 설정 (자동 생성)
+name               = "cp-a644e615-wp"
+main               = "worker.js"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+# Worker URL: https://cp-a644e615-wp.choichoi3227.workers.dev
+
+[[kv_namespaces]]
+binding = "CACHE"
+id      = "7881fd8eaf004174b56c9dfdc07f453b"
+
+[[services]]
+binding = "PHP_RUNNER"
+service = "cp-a644e615-wp-php"
+
+[vars]
+SITE_ID      = "a644e615-200a-4ba2-ae6f-73eb65b8b37a"
+GH_OWNER     = "cswchoi9890"
+GH_REPO      = "cp-a644e615-site-a644e615"
+GH_PAGES_URL = "https://cswchoi9890.github.io/cp-a644e615-site-a644e615"
